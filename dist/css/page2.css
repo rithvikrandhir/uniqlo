@@ -1,0 +1,221 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container{
+  
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(100px, 1fr));
+    grid-row-gap: 20px;
+    grid-column-gap: 20px;
+    justify-content: center;
+}
+
+.box{
+
+    width: 100px;
+    height: 100px;
+    justify-self: center;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    /* background-size: contain; */
+}
+
+.main-box{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    z-index: 10;
+    background-image: url('../images/bg-madeforall.gif');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: initial;
+    overflow: hidden;
+} 
+.uniqlo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    font-size: 80px;
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-weight: bold;
+    transform: translateX(200%);
+}
+/* .box:hover{
+    width: 0%;
+    /* height: 0; */
+    /* transition: 1s; */
+
+
+.box img{
+    width: 70%;
+     /* filter: grayscale(); */
+    mix-blend-mode: luminosity;
+    
+}
+.box.logo img{
+    width: 100;
+    mix-blend-mode: normal;
+}
+.form-container{
+    display: none;
+    grid-template-columns: 10% 1fr 10%;
+    grid-template-rows: 15% 1fr;
+    height: 100vh;
+    width: 100vw;
+}
+.form{
+    width: 60%;
+    background-color: rgb(214, 214, 214);
+    height: 70%;
+    border-radius: 10px;
+    align-self: center;
+    justify-self: center;
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.form-title{
+    grid-column: 2;
+    grid-row: 2;
+    align-self: start;
+    justify-self: center;
+}
+.main-logo img{
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    margin: 20px;
+    opacity: 0;
+}
+.name-box{
+    width: 70%;
+    height: 40%;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    grid-row: 1;
+    align-self: center;
+    justify-self: center;
+}
+.story{
+    width: 70%;
+    height: 90%;
+    color: gray;
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px;
+    padding-top: 20px;
+    font-size: 14px;
+    grid-row: 2;
+    align-self: center;
+    justify-self: center;
+}
+#upload-button{
+    cursor: pointer;
+    outline: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    filter: alpha(opacity=0); /* IE < 9 */
+    opacity: 0;
+    
+}
+.upload-button {
+    position: relative;
+    /* display: inline-block; */
+    width: 47%;
+    height: 40%;
+    color: rgb(0, 0, 0);
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    grid-row: 3;
+    align-self: center;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    align-items: center;
+}
+.response{
+    /* display: none; */
+    grid-column: 2;
+    width: 60%;
+    height: 0;
+    color: white;
+    background-color: red;
+    justify-self: center;
+    text-align: center;
+    display: grid;
+    align-items: center;
+    font-weight: bold;
+}
+.upload-button .fa-cloud-upload-alt{
+    color: red;
+    justify-self: end;
+}
+.upload-button .fa-check-circle{
+    display: none;
+    color: green;
+    justify-self: end;
+}
+.go-back{
+    font-weight: bold;
+    margin-top: 30px;
+    margin-right: 10px ;
+    background-color: white;
+    border-radius: 5px;
+    /* padding: 10px 0; */
+    height: 30px;
+    opacity: 0;
+}
+/* .go-back a{
+    text-decoration: none;
+    color:black;
+    /* padding: 30px;
+} */
+.upload-button p{
+    margin: 0;
+    justify-self: start;
+    margin-left: 20px;
+    text-transform: capitalize;
+    color: gray;
+}
+.submit-form{
+    width: 50%;
+    height: 40%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(235, 49, 49);
+    border: none;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 14px;
+    grid-row: 4;
+    align-self: baseline;
+    justify-self: center;
+    text-transform: capitalize;
+}
